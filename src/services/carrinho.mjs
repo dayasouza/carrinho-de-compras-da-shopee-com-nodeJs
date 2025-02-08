@@ -28,7 +28,7 @@ async function calcularTotal(usuarioCarrinho){
 async function exibirCarrinho(usuarioCarrinho){
     console.log("Lista de compras da Shopee");
     usuarioCarrinho.forEach((item, index) => {
-        console.log(`${index + 1}. ${item.nome} - R$ ${item.preco} | ${item.quantidade} | ${item.subtotal}`)
+        console.log(`${index + 1}. ${item.nome} - R$ ${item.preco} | ${item.quantidade} | Subtotal = ${item.subtotal()}`);
     })
 }
 
