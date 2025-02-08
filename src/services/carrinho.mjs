@@ -21,8 +21,9 @@ async function removerItem(usuarioCarrinho, id) {
 
 // Calcular total
 async function calcularTotal(usuarioCarrinho){
+    console.log("\nO total do carrinho da Shopee é: ");
     const resultado = usuarioCarrinho.reduce((total, item) => total + item.subtotal(), 0);
-    console.log(`\n${resultado}`);
+    console.log(`${resultado}`);
 }
 
 async function exibirCarrinho(usuarioCarrinho){
