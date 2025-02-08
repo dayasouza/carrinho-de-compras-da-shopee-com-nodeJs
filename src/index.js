@@ -11,8 +11,9 @@ const item2 = await criarItem("hotwheels lamborghini", 39.99, 3);
 
 await carrinhoService.adicionarItem(meuCarrinho, item1);
 await carrinhoService.adicionarItem(meuCarrinho, item2);
+await carrinhoService.exibirCarrinho(meuCarrinho);
 
-await carrinhoService.deletarItem(meuCarrinho, item2.nome);
+// await carrinhoService.deletarItem(meuCarrinho, item2.nome);
 
 console.log("O total do carrinho da Shopee é: ");
 await carrinhoService.calcularTotal(meuCarrinho);
