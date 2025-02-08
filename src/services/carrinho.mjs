@@ -15,8 +15,22 @@ async function deletarItem(usuarioCarrinho, nome) {
 }
 
 // Remover item
-async function removerItem(usuarioCarrinho, id) {
+async function removerItem(usuarioCarrinho, item) {
+    const indexFound = usuarioCarrinho.findIndex((p) => p.nome === item.nome);
+    if (indexFound === -1){
+        console.log("item não encontrado");
+        return;
+    }
 
+    if (usuarioCarrinho[indexFound].quantidade > 1){
+        usuarioCarrinho[indexFound].quantidade -= 1;
+        return;
+    }
+
+    if (usuarioCarrinho[indexFound].quantidade == 1){
+        usuarioCarrinho.splice(indexFound, 1);
+        return;
+    }
 }
 
 // Calcular total
