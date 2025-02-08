@@ -7,7 +7,7 @@ const listaDeDesejo = [];
 console.log("Bem vindo ao seu carrinho da Shopee!");
 
 const item1 = await criarItem("hotwheels ferrari", 20.99, 1);
-const item2 = await criarItem("hotweels lamborghini", 39.99, 3);
+const item2 = await criarItem("hotwheels lamborghini", 39.99, 3);
 
 await carrinhoService.adicionarItem(meuCarrinho, item1);
 await carrinhoService.adicionarItem(meuCarrinho, item2);
