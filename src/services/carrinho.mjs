@@ -22,13 +22,13 @@ async function removerItem(usuarioCarrinho, id) {
 // Calcular total
 async function calcularTotal(usuarioCarrinho){
     const resultado = usuarioCarrinho.reduce((total, item) => total + item.subtotal(), 0);
-    console.log(resultado);
+    console.log(`\n${resultado}`);
 }
 
 async function exibirCarrinho(usuarioCarrinho){
     console.log("Lista de compras da Shopee");
     usuarioCarrinho.forEach((item, index) => {
-        console.log(`${index + 1}. ${item.nome} - R$ ${item.preco} | ${item.quantidade} | Subtotal = ${item.subtotal()}`);
+        console.log(`\n${index + 1}. ${item.nome} - R$ ${item.preco} | ${item.quantidade}x | Subtotal = ${item.subtotal()}`);
     })
 }
 
